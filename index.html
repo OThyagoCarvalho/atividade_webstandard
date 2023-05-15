@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="./global.css">
+  <title> Fisioterapia Home Care</title>
+</head>
+
+<body>
+
+  <!--  HEADER in HERO SECTION -->
+  <div class="faded__background">
+    <header id="top" name="header" class="header">
+      <p name="brand-name" class="brand__name"> FisioEmCasa </p>
+      <nav name="navbar" class="navbar">
+        <ul class="navbar__links desk__only">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="desk__only" type="button"> Login </button>
+      <div class="mobile__only">
+        <img class="mobile__menu__icon" src="./assets/hamburger.png"
+          onclick="document.querySelector('.mobile__navbar__links').classList.toggle('active')">
+        <div class="mobile__navbar__links">
+          <ul class="mobile__navbar__links__list">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <li onclick="document.querySelector('.mobile__navbar__links').classList.toggle('active')"><a
+                href="#">Voltar</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO  -->
+    <section name="hero" class="hero__section">
+      <div class="hero__text">
+        <p> Fisio Home Care</p>
+        <h1>O melhor lugar pra se cuidar é no conforto do nosso lar.</h1>
+        <p>Atendimento domiciliar</p>
+      </div>
+    </section>
+  </div>
+  <!-- SELLING PROP SECTION -->
+  <section name="selling-proposition" class="selling__proposition">
+    <div name="benefit-card" class="benefit__card">
+      <h3> Sem transtorno no trânsito</h3>
+      <p> Otimize sua rotina, evite preocupações com rodízio, gastos com estacionamento e horas perdidas no trânsito.
+      </p>
+    </div>
+    <div name="benefit-card" class="benefit__card">
+      <h3> Atendimento personalizado</h3>
+      <p> Execução de um plano de tratamento individualizado, com foco na sua necessidade e acompanhamento de um
+        profissional especializado.
+      </p>
+    </div>
+    <div name="benefit-card" class="benefit__card">
+      <h3> Aceitamos seu plano de saúde</h3>
+      <p> Consulte a disponibilidade de atendimento para o seu plano de saúde.
+      </p>
+    </div>
+  </section>
+
+  <section name="text__area" class="text__area">
+    <div>
+      <h2> Fisioterapia Home Care</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora necessitatibus nobis doloremque veritatis
+        incidunt, sapiente molestias eius mollitia sunt labore obcaecati doloribus quas odit blanditiis facilis ab
+        similique laboriosam! Quo officiis maxime libero! Quae impedit animi reprehenderit tenetur officiis sapiente,
+        qui debitis exercitationem labore id earum quo fuga laboriosam. Laudantium dolores recusandae sint laborum
+        molestias ad, fugiat commodi? Amet, eos? Deleniti natus voluptates nobis eaque voluptatum nihil, ad deserunt
+        minima! Voluptates natus tempore repudiandae iste optio nemo reiciendis dolorum numquam dolores veritatis
+        laborum repellendus ducimus porro, aliquam eligendi ipsum. Maxime deleniti veritatis numquam sed totam? Eos
+        molestias est in assumenda. Laudantium deleniti culpa exercitationem earum dolorum, reprehenderit quibusdam
+        perspiciatis natus tempora necessitatibus harum cupiditate doloribus soluta dignissimos possimus ducimus nemo et
+        adipisci id molestias atque?</p>
+    </div>
+    <img class="text__area__image desk__only" src="./assets/pexels-yan-krukau-5794025.jpg">
+  </section>
+
+  <!-- BOOK -->
+  <section name="selling-proposition" class="selling__proposition">
+    <div name="book-card" class="book__card">
+      <img class="profesional__profile" src="./assets/pexels-antoni-shkraba-5215024.jpg">
+      <div class="profesional__info">
+        <h3> Dra. Maria</h3>
+        <p> Fisioterapeuta</p>
+        <p> CREFITO: 123456</p>
+      </div>
+      <button class="book__button" type="button"> Agendar </button>
+    </div>
+    <div name="book-card" class="book__card">
+      <img class="profesional__profile" src="./assets/pexels-thirdman-5327656.jpg">
+      <div class="profesional__info">
+        <h3> Dr. Fernando</h3>
+        <p> Fisioterapeuta</p>
+        <p> CREFITO: 123456</p>
+      </div>
+      <button class="book__button" type="button" disabled> Indiponível </button>
+    </div>
+    <div name="book-card" class="book__card">
+      <img class="profesional__profile" src="./assets/pexels-tima-miroshnichenko-5452201.jpg">
+      <div class="profesional__info">
+        <h3> Dra. Ana</h3>
+        <p> Fisioterapeuta</p>
+        <p> CREFITO: 123456</p>
+      </div>
+      <button class="book__button" type="button"> Agendar </button>
+    </div>
+  </section>
+
+  <!--  FORM -->
+  <section name="contact" class="mail__form">
+    <h2 class="form__title"> Solicite um contato</h2>
+    <form>
+      <div>
+        <input id="email" name="email" class="email__input" type="email" placeholder="Digite seu email"><button
+          type="button" class="form__submit__button">Solicitar</button>
+      </div>
+    </form>
+  </section>
+  <footer name="footer" class="footer">
+    <section>
+      <div class="footer__text">
+        <p> FisioEmCasa </p>
+        <p> Todos os direitos reservados </p>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>

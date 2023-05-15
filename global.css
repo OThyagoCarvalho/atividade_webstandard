@@ -1,0 +1,341 @@
+:root {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --max-content-width: 1200px;
+  --desktop-side-padding: 2rem;
+  --primary-color: tomato;
+  --gray-color: #555;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-size: 1rem;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mobile__only {
+  display: none;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem var(--desktop-side-padding);
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-content-width);
+}
+
+.brand__name {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: black;
+}
+
+.navbar__links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  font-weight: 600;
+  color: var(--gray-color);
+}
+
+.navbar__links li+li {
+  margin-left: 1rem;
+}
+
+section {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--desktop-side-padding);
+}
+
+.mobile__menu__icon {
+  cursor: pointer;
+  color: var(--primary-color);
+  width: 2rem;
+}
+
+.mobile__navbar__links {
+  display: none;
+}
+
+.mobile__navbar__links.active {
+  display: flex;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  transition: all 1s ease-in-out;
+}
+
+.mobile__navbar__links__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile__navbar__links__list li {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+/* HERO */
+
+.faded__background {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(./assets/pexels-yan-krukau-5794059.jpg);
+  background-size: cover;
+  background-position-x: 25%;
+  min-height: 700px;
+  border-radius: 0 0 50% 50%/ 0 0 5rem 5rem;
+}
+
+section.hero__section {
+  display: flex;
+  max-width: var(--max-content-width);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
+}
+
+.hero__text h1 {
+  font-size: 3rem;
+  line-height: 1;
+  margin: 1.5rem 0;
+}
+
+.hero__text p {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* SELLING PROP */
+
+.selling__proposition {
+  display: flex;
+  margin: 6rem auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.benefit__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: tomato;
+  color: white;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  height: 400px;
+  width: 100vw;
+  max-width: 300px;
+}
+
+.benefit__card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* TEXT AREA */
+.text__area {
+  display: flex;
+  margin: 6rem auto;
+  justify-content: space-between;
+  gap: 2rem;
+
+}
+
+.text__area h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.text__area p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--gray-color);
+  text-align: justify;
+}
+
+.text__area img {
+  width: 100%;
+  min-width: 450px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+
+/*  BOOK */
+.book__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: var(--primary-color);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  height: 400px;
+  width: 100vw;
+  max-width: 300px;
+}
+
+.profesional__profile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  object-position: 100% 10%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.profesional__info {
+  position: absolute;
+  padding: 1rem;
+  bottom: 0;
+  left: 0;
+}
+
+.book__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+.mail__form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail__form div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 5rem;
+}
+
+input.email__input {
+  width: 100vw;
+  max-width: 400px;
+  flex: 1;
+  flex-grow: 1;
+  height: 2.68rem;
+  border-radius: 0;
+  outline: none;
+  border: 0 solid;
+  margin-top: 2.5rem;
+  background-color: #eee;
+  padding: 0 1rem;
+}
+
+input.email__input::placeholder {
+  color: black;
+  font-weight: 600;
+}
+
+.form__submit__button {
+  border-radius: 0;
+  margin: 0;
+  outline: none;
+}
+
+footer {
+  border-top: 1px solid #eee;
+  padding: 1.5rem 0;
+
+}
+
+.footer__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1028px) {
+
+  .desk__only {
+    display: none;
+  }
+
+  .mobile__only {
+    display: block;
+  }
+
+  .hero__text {
+    text-align: center;
+  }
+
+  .book__card {
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 475px;
+    max-width: 100%;
+  }
+
+  .benefit__card {
+    margin-bottom: 2rem;
+    width: 100%;
+    height: fit-content;
+    max-width: 100%;
+  }
+
+  .benefit__card:last-child {
+    margin-bottom: 0;
+  }
+
+  input.email__input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
